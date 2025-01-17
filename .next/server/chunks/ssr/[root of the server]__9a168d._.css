@@ -430,6 +430,10 @@ img, video {
   inset: 0;
 }
 
+.bottom-0 {
+  bottom: 0;
+}
+
 .bottom-10 {
   bottom: 2.5rem;
 }
@@ -639,6 +643,10 @@ img, video {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .gap-12 {
   gap: 3rem;
 }
@@ -649,6 +657,10 @@ img, video {
 
 .gap-2 {
   gap: .5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-8 {
@@ -758,6 +770,10 @@ img, video {
   background-color: #000000e6;
 }
 
+.bg-black\/95 {
+  background-color: #000000f2;
+}
+
 .bg-white\/50 {
   background-color: #ffffff80;
 }
@@ -771,12 +787,21 @@ img, video {
   background-color: #18181b80;
 }
 
+.bg-zinc-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity, 1));
+}
+
 .object-cover {
   object-fit: cover;
 }
 
 .p-1 {
   padding: .25rem;
+}
+
+.p-4 {
+  padding: 1rem;
 }
 
 .p-6 {
@@ -810,6 +835,11 @@ img, video {
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.py-2 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
 .py-32 {
@@ -910,12 +940,22 @@ img, video {
   color: #ffffffe6;
 }
 
+.underline {
+  text-decoration-line: underline;
+}
+
 .opacity-0 {
   opacity: 0;
 }
 
 .opacity-100 {
   opacity: 1;
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline-none {
@@ -1172,6 +1212,11 @@ a:hover ~ .custom-cursor, button:hover ~ .custom-cursor {
   background-color: #0066ffe6;
 }
 
+.hover\:bg-zinc-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 63 70 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:text-accent:hover {
   --tw-text-opacity: 1;
   color: rgb(0 102 255 / var(--tw-text-opacity, 1));
@@ -1213,6 +1258,12 @@ a:hover ~ .custom-cursor, button:hover ~ .custom-cursor {
 
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
+}
+
+@media (width >= 640px) {
+  .sm\:flex-row {
+    flex-direction: row;
+  }
 }
 
 @media (width >= 768px) {
