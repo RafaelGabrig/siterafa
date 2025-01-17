@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Background */
+#home {
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+}
+
+/* Estrelas */
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
+
+.stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF,134px 1321px #FFF,1882px 812px #FFF,821px 1760px #FFF,
+    571px 1677px #FFF,1292px 1051px #FFF,1337px 1629px #FFF,1279px 1410px #FFF,
+    1162px 1176px #FFF,1365px 1834px #FFF,1123px 1751px #FFF,1777px 532px #FFF,
+    1772px 1576px #FFF,1200px 1927px #FFF,1674px 1661px #FFF,895px 1928px #FFF,
+    1547px 1772px #FFF,1075px 1680px #FFF,1260px 1250px #FFF,1318px 831px #FFF,
+    1097px 1196px #FFF,1418px 1144px #FFF,1447px 1484px #FFF,287px 1916px #FFF;
+  animation: animStar 50s linear infinite;
+}
+
+.stars::after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF,134px 1321px #FFF,1882px 812px #FFF,821px 1760px #FFF,
+    571px 1677px #FFF,1292px 1051px #FFF,1337px 1629px #FFF,1279px 1410px #FFF,
+    1162px 1176px #FFF,1365px 1834px #FFF,1123px 1751px #FFF,1777px 532px #FFF,
+    1772px 1576px #FFF,1200px 1927px #FFF,1674px 1661px #FFF,895px 1928px #FFF,
+    1547px 1772px #FFF,1075px 1680px #FFF,1260px 1250px #FFF,1318px 831px #FFF,
+    1097px 1196px #FFF,1418px 1144px #FFF,1447px 1484px #FFF,287px 1916px #FFF;
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF,134px 1321px #FFF,1882px 812px #FFF,821px 1760px #FFF,
+    571px 1677px #FFF,1292px 1051px #FFF,1337px 1629px #FFF,1279px 1410px #FFF;
+  animation: animStar 100s linear infinite;
+}
+
+.stars2::after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF,134px 1321px #FFF,1882px 812px #FFF,821px 1760px #FFF,
+    571px 1677px #FFF,1292px 1051px #FFF,1337px 1629px #FFF,1279px 1410px #FFF;
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF,134px 1321px #FFF,1882px 812px #FFF,821px 1760px #FFF;
+  animation: animStar 150s linear infinite;
+}
+
+.stars3::after {
+  content: " ";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: 1744px 122px #FFF,134px 1321px #FFF,1882px 812px #FFF,821px 1760px #FFF;
+}
+
+/* Cursor personalizado */
+* {
+  cursor: none;
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 153, 255, 0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.1s ease-out;
+  animation: cursorAnim 0.5s infinite alternate;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid rgba(0, 153, 255, 0.2);
+  border-radius: 50%;
+  opacity: .5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 0.5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.4);
+  }
+}
+
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+.expand {
+  animation: cursorAnim3 .5s forwards;
+}
+
+/* Hover states */
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+  transform: scale(1.5);
+  background-color: rgba(0, 153, 255, 0.1);
+  border-color: #0099ff;
+  box-shadow: 0 0 15px rgba(0, 153, 255, 0.5);
+}
